@@ -2,12 +2,25 @@
   "name": "@meiko1/component-detail-test1",
   "version": "0.0.1",
   "type": "module",
+  "main": "./dist/component-detail-test1.umd.js",
+  "module": "./dist/component-detail-test1.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/component-detail-test1.umd.js",
+      "import": "./dist/component-detail-test1.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "prepublishOnly": "tsc -b && vite build"
+    "prepublishOnly": "vite build",
+    "postinstall": "vite build || true"
   },
   "dependencies": {
     "react": "^19.0.0",
