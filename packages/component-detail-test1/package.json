@@ -1,13 +1,13 @@
 {
   "name": "@meiko/component-detail-test1",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepublishOnly": "tsc -b && vite build"
   },
   "dependencies": {
     "react": "^19.0.0",
